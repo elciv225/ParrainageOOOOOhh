@@ -1,0 +1,103 @@
+/* Conteneur principal du sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 1.25rem 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    border-right: 1px solid #e9ecef;
+}
+
+/* Style des items du menu */
+.menu-item {
+    margin-bottom: 0.5rem;
+}
+
+.menu-button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #495057;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+/* États actif et hover */
+.menu-button:hover,
+.menu-button.active {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+
+.menu-button.active {
+    background-color: #e9ecef;
+    font-weight: 500;
+}
+
+.menu-button-content {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+/* Icônes */
+.menu-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    opacity: 0.8;
+}
+
+.arrow {
+    width: 0.875rem;
+    height: 0.875rem;
+    transition: transform 0.2s;
+}
+
+.menu-button.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Sous-menu */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    margin-left: 2rem;
+}
+
+/* Sous-menu actif */
+.submenu.active {
+    max-height: 400px;
+}
+
+.submenu a {
+    display: block;
+    color: #6c757d;
+    text-decoration: none;
+    padding: 0.625rem;
+    margin-top: 0.25rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.submenu a:hover,
+.submenu a.active {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.submenu a.active {
+    color: #495057;
+    font-weight: 500;
+}
